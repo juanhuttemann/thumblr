@@ -1,4 +1,10 @@
-<% @posts.each do |post|  %>
- <%= post.title %>
- <%= post.body %>
+<% if @posts.size < 1 %>
+  <p>No thumbs yet!</p>
+  <p>Add some <%=link_to "Here", new_post_path, class:"btn btn-success"%>  </p>
+<% else %>
+  <% @posts.each do |post|  %>
+   <%= post.title %>
+   <%= post.body %>
+   <%= image_tag post.image.url(:thumb) %>
+  <% end %>
 <% end %>
