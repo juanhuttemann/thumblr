@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 #project gems
 gem 'devise'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
 
 
 group :development, :test do
